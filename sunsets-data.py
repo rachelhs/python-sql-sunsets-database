@@ -82,5 +82,7 @@ for x in names:
     else:
         cursor.execute("UPDATE sunsetsLive SET live = 0 WHERE SunsetID=?", sunset_id)
 
+connection.commit()
+
 cursor.execute("SELECT * FROM sunsetsLive")
 print(cursor.fetchall())
